@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Chef More's Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* RESET COMPLETO PARA BLOGGER */
+        .chef-catalog-wrapper {
+            all: initial !important;
+            display: block !important;
+        }
+
+        .chef-catalog-wrapper * {
+            all: unset !important;
+            display: revert !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Eliminar TODOS los números de listas de Blogger */
+        .chef-catalog-wrapper ol,
+        .chef-catalog-wrapper ul,
+        .chef-catalog-wrapper ol li,
+        .chef-catalog-wrapper ul li {
+            list-style: none !important;
+            list-style-type: none !important;
+            list-style-position: outside !important;
+            counter-reset: none !important;
+            counter-increment: none !important;
+        }
+
+        .chef-catalog-wrapper ol::before,
+        .chef-catalog-wrapper ul::before,
+        .chef-catalog-wrapper li::marker,
+        .chef-catalog-wrapper li::before {
+            display: none !important;
+            content: "" !important;
+            visibility: hidden !important;
+        }
+
+        .chef-catalog-wrapper {
+            font-family: 'Poppins', sans-serif !important;
+            background: linear-gradient(135deg, #FAF8F3 0%, #F5F5DC 100%) !important;
+            min-height: 100vh !important;
+            padding: 20px !important;
+            position: relative !important;
+            z-index: 999999 !important;
+            color: #333 !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ESTILOS BASE */
+        .chef-catalog-wrapper h1,
+        .chef-catalog-wrapper h2,
+        .chef-catalog-wrapper h3,
+        .chef-catalog-wrapper h4 {
+            font-weight: 700 !important;
+            margin: 0 0 15px 0 !important;
+            line-height: 1.3 !important;
+        }
+
+        .chef-catalog-wrapper p {
+            margin: 0 0 10px 0 !important;
+            line-height: 1.6 !important;
+        }
+
+        .chef-catalog-wrapper ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            counter-reset: none !important;
+        }
+
+        .chef-catalog-wrapper li {
+            padding: 8px 0 8px 25px !important;
+            position: relative !important;
+            line-height: 1.6 !important;
+            list-style-type: none !important;
+            counter-increment: none !important;
+            display: block !important;
+        }
+
+        /* IMPORTANTE: Agregar check verde solo donde queremos */
+        .item-includes li::before,
+        .subsection li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+
+        /* Asegurar que NO hay otros ::before */
+        .chef-catalog-wrapper li::marker {
+            content: "" !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Ocultar números de ordered lists */
+        .chef-catalog-wrapper ol {
+            list-style: none !important;
+        }
+
+        .chef-catalog-wrapper ol li {
+            list-style: none !important;
+            counter-increment: none !important;
+        }
+
+        .chef-catalog-wrapper ol li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+
+        .chef-catalog-wrapper button {
+            cursor: pointer !important;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        .chef-catalog-wrapper a {
+            text-decoration: none !important;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: linear-gradient(135deg, #7B8B52 0%, #556B2F 100%) !important;
+            color: white !important;
+            text-align: center !important;
+            padding: 60px 20px !important;
+            border-radius: 20px !important;
+            margin-bottom: 30px !important;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2) !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .hero-section::before {
+            content: '' !important;
+            position: absolute !important;
+            top: -50% !important;
+            right: -50% !important;
+            width: 200% !important;
+            height: 200% !important;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%) !important;
+            animation: pulse 15s infinite !important;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+
+        .hero-logo {
+            width: 150px !important;
+            height: 150px !important;
+            margin: 0 auto 20px !important;
+            background: white !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        .hero-logo img {
+            width: 120px !important;
+            height: 120px !important;
+            object-fit: contain !important;
+            border-radius: 0 !important;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 3.5em !important;
+            font-weight: 900 !important;
+            margin-bottom: 15px !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+            position: relative !important;
+            z-index: 1 !important;
+            color: white !important;
+        }
+
+        .hero-subtitle {
+            font-family: 'Great Vibes', cursive !important;
+            font-size: 2em !important;
+            color: #C7A95D !important;
+            margin-bottom: 10px !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        .hero-tagline {
+            font-size: 1.1em !important;
+            opacity: 0.95 !important;
+            position: relative !important;
+            z-index: 1 !important;
+            color: white !important;
+        }
+
+        /* GALERÍA DE FOTOS */
+        .photo-gallery {
+            background: white !important;
+            padding: 40px !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+            margin-bottom: 30px !important;
+        }
+
+        .gallery-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 2.5em !important;
+            color: #7B8B52 !important;
+            text-align: center !important;
+            margin-bottom: 30px !important;
+            padding-bottom: 15px !important;
+            border-bottom: 3px solid #C7A95D !important;
+        }
+
+        .gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            gap: 20px !important;
+        }
+
+        .gallery-item {
+            position: relative !important;
+            overflow: hidden !important;
+            border-radius: 15px !important;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+            transition: transform 0.3s !important;
+            cursor: pointer !important;
+            aspect-ratio: 1 !important;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) !important;
+            box-shadow: 0 10px 30px rgba(123, 139, 82, 0.3) !important;
+        }
+
+        .gallery-item img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+
+        .gallery-overlay {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent) !important;
+            color: white !important;
+            padding: 15px !important;
+            transform: translateY(100%) !important;
+            transition: transform 0.3s !important;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0) !important;
+        }
+
+        /* FORMULARIO DE COTIZACIÓN */
+        .quote-form-section {
+            background: white !important;
+            padding: 40px !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+            margin-bottom: 30px !important;
+            border: 3px solid #C7A95D !important;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 2.5em !important;
+            color: #7B8B52 !important;
+            text-align: center !important;
+            margin-bottom: 30px !important;
+        }
+
+        .form-group {
+            margin-bottom: 20px !important;
+        }
+
+        .form-group label {
+            display: block !important;
+            font-weight: 600 !important;
+            margin-bottom: 8px !important;
+            color: #7B8B52 !important;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100% !important;
+            padding: 12px !important;
+            border: 2px solid #ddd !important;
+            border-radius: 8px !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 16px !important;
+            transition: border-color 0.3s !important;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none !important;
+            border-color: #7B8B52 !important;
+        }
+
+        .form-group textarea {
+            min-height: 120px !important;
+            resize: vertical !important;
+        }
+
+        .form-row {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 20px !important;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #7B8B52 0%, #556B2F 100%) !important;
+            color: white !important;
+            padding: 15px 40px !important;
+            border: none !important;
+            border-radius: 25px !important;
+            font-size: 1.1em !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            transition: all 0.3s !important;
+            width: 100% !important;
+            margin-top: 10px !important;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 30px rgba(123, 139, 82, 0.4) !important;
+        }
+
+        /* CALCULADORA */
+        .budget-calculator {
+            background: white !important;
+            padding: 30px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+            margin-bottom: 30px !important;
+            border: 3px solid #C7A95D !important;
+        }
+
+        .calculator-header {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 2em !important;
+            color: #7B8B52 !important;
+            text-align: center !important;
+            margin-bottom: 20px !important;
+        }
+
+        .selected-items {
+            margin-top: 15px !important;
+            padding: 15px !important;
+            background: #FAF8F3 !important;
+            border-radius: 10px !important;
+            max-height: 300px !important;
+            overflow-y: auto !important;
+        }
+
+        .selected-item {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 15px !important;
+            margin-bottom: 10px !important;
+            background: white !important;
+            border-radius: 10px !important;
+            border-left: 4px solid #7B8B52 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+        }
+
+        .calculator-total {
+            background: linear-gradient(135deg, #C7A95D 0%, #B39A4D 100%) !important;
+            color: white !important;
+            padding: 20px !important;
+            border-radius: 10px !important;
+            text-align: center !important;
+            font-size: 2em !important;
+            font-weight: 700 !important;
+            margin-top: 20px !important;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Ocultar números de Blogger */
+        .chef-catalog-wrapper .item-includes ul li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+        }
+
+        .chef-catalog-wrapper .subsection ul li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+        }
+
+        /* CATEGORÍAS */
+        .categories-nav {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+            gap: 20px !important;
+            margin-bottom: 40px !important;
+        }
+
+        .category-card {
+            background: white !important;
+            padding: 25px !important;
+            border-radius: 15px !important;
+            text-align: center !important;
+            cursor: pointer !important;
+            transition: all 0.4s !important;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
+            border: 3px solid transparent !important;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 15px 40px rgba(123, 139, 82, 0.3) !important;
+            border-color: #7B8B52 !important;
+        }
+
+        .category-card.active {
+            border-color: #C7A95D !important;
+            background: linear-gradient(135deg, #FAF8F3 0%, white 100%) !important;
+        }
+
+        .category-icon {
+            font-size: 3em !important;
+            margin-bottom: 10px !important;
+        }
+
+        .category-name {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.1em !important;
+            color: #7B8B52 !important;
+            font-weight: 700 !important;
+        }
+
+        /* SECCIONES DE CONTENIDO */
+        .content-section {
+            background: white !important;
+            padding: 40px !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+            margin-bottom: 30px !important;
+            display: none !important;
+        }
+
+        .content-section.active {
+            display: block !important;
+            animation: fadeIn 0.5s ease-in !important;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 2.5em !important;
+            color: #7B8B52 !important;
+            margin-bottom: 30px !important;
+            padding-bottom: 15px !important;
+            border-bottom: 3px solid #C7A95D !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 15px !important;
+        }
+
+        /* GRID DE MENÚ */
+        .menu-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+            gap: 25px !important;
+            margin-top: 30px !important;
+        }
+
+        .menu-item {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F3 100%) !important;
+            padding: 25px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
+            transition: all 0.3s !important;
+            border: 2px solid transparent !important;
+            position: relative !important;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 40px rgba(123, 139, 82, 0.2) !important;
+            border-color: #7B8B52 !important;
+        }
+
+        .item-header {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            margin-bottom: 15px !important;
+            width: 100% !important;
+            position: static !important;
+            float: none !important;
+            clear: both !important;
+        }
+
+        .item-name {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.3em !important;
+            color: #7B8B52 !important;
+            font-weight: 700 !important;
+            flex: 1 !important;
+            position: static !important;
+            float: none !important;
+            display: block !important;
+        }
+
+        .item-price {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 1.3em !important;
+            color: #C7A95D !important;
+            font-weight: 700 !important;
+            white-space: nowrap !important;
+            margin-left: 15px !important;
+            position: static !important;
+            float: none !important;
+            display: inline-block !important;
+        }
+
+        .item-description {
+            color: #666 !important;
+            line-height: 1.7 !important;
+            margin-bottom: 15px !important;
+            font-size: 0.95em !important;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            position: static !important;
+            float: none !important;
+        }
+
+        .item-includes {
+            background: #FAF8F3 !important;
+            padding: 15px !important;
+            border-radius: 10px !important;
+            border-left: 4px solid #7B8B52 !important;
+            margin-top: 15px !important;
+        }
+
+        .item-includes strong {
+            color: #7B8B52 !important;
+            font-weight: 700 !important;
+            display: block !important;
+            margin-bottom: 8px !important;
+        }
+
+        .item-includes ul,
+        .item-includes ol {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            counter-reset: none !important;
+        }
+
+        .item-includes li {
+            padding: 8px 0 8px 25px !important;
+            position: relative !important;
+            line-height: 1.6 !important;
+            list-style-type: none !important;
+            counter-increment: none !important;
+            display: block !important;
+        }
+
+        .item-includes li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+
+        .item-includes li::marker {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Forzar eliminar números en item-includes */
+        .item-includes ol li::before {
+            content: "✓" !important;
+        }
+
+        .item-includes ol li::marker {
+            display: none !important;
+        }
+
+        /* BOTONES */
+        .add-to-budget-btn {
+            background: #7B8B52 !important;
+            color: white !important;
+            border: none !important;
+            padding: 10px 20px !important;
+            border-radius: 20px !important;
+            cursor: pointer !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600 !important;
+            transition: all 0.3s !important;
+            margin-top: 15px !important;
+            font-size: 0.9em !important;
+            width: 100% !important;
+        }
+
+        .add-to-budget-btn:hover {
+            background: #556B2F !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(123, 139, 82, 0.3) !important;
+        }
+
+        .remove-item-btn {
+            background: #f44336 !important;
+            color: white !important;
+            border: none !important;
+            padding: 5px 12px !important;
+            border-radius: 15px !important;
+            cursor: pointer !important;
+            font-size: 0.85em !important;
+            transition: all 0.3s !important;
+            font-weight: 600 !important;
+        }
+
+        .remove-item-btn:hover {
+            background: #d32f2f !important;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-btn {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            width: 60px !important;
+            height: 60px !important;
+            background: #25D366 !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: white !important;
+            font-size: 2em !important;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4) !important;
+            cursor: pointer !important;
+            z-index: 10000000 !important;
+            transition: all 0.3s !important;
+            text-decoration: none !important;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15) !important;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6) !important;
+        }
+
+        .subsection ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            counter-reset: none !important;
+        }
+
+        .subsection li {
+            padding: 8px 0 8px 25px !important;
+            position: relative !important;
+            line-height: 1.6 !important;
+            list-style-type: none !important;
+            counter-increment: none !important;
+            display: block !important;
+        }
+
+        .subsection li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+        }
+
+        .subsection li::marker {
+            content: "" !important;
+            display: none !important;
+        }
+
+        .subsection ol,
+        .subsection ol li {
+            list-style: none !important;
+            counter-reset: none !important;
+            counter-increment: none !important;
+        }
+
+        .subsection ol li::before {
+            content: "✓" !important;
+        }
+
+        /* SUBSECTIONS */
+        .subsection {
+            margin: 40px 0 !important;
+        }
+
+        .subsection ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            counter-reset: none !important;
+        }
+
+        .subsection li {
+            padding: 8px 0 8px 25px !important;
+            position: relative !important;
+            line-height: 1.6 !important;
+            list-style-type: none !important;
+            counter-increment: none !important;
+            display: block !important;
+        }
+
+        .subsection li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+        }
+
+        .subsection li::marker {
+            content: "" !important;
+            display: none !important;
+        }
+
+        .subsection ol,
+        .subsection ol li {
+            list-style: none !important;
+            counter-reset: none !important;
+            counter-increment: none !important;
+        }
+
+        .subsection ol li::before {
+            content: "✓" !important;
+        }
+
+        .subsection-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.8em !important;
+            color: #7B8B52 !important;
+            margin-bottom: 20px !important;
+            padding-left: 15px !important;
+            border-left: 5px solid #C7A95D !important;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #FAF8F3 0%, #F5F5DC 100%) !important;
+            padding: 20px !important;
+            border-radius: 12px !important;
+            border-left: 5px solid #C7A95D !important;
+            margin: 20px 0 !important;
+            font-style: italic !important;
+            color: #666 !important;
+            line-height: 1.7 !important;
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, #7B8B52 0%, #556B2F 100%) !important;
+            color: white !important;
+            padding: 30px !important;
+            border-radius: 15px !important;
+            margin: 30px 0 !important;
+            text-align: center !important;
+            box-shadow: 0 10px 30px rgba(123, 139, 82, 0.3) !important;
+        }
+
+        .price-highlight h3 {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 2em !important;
+            margin-bottom: 15px !important;
+            color: white !important;
+        }
+
+        .price-highlight p {
+            color: white !important;
+            font-size: 1.1em !important;
+        }
+
+        /* FOOTER */
+        .footer-section {
+            background: linear-gradient(135deg, #7B8B52 0%, #556B2F 100%) !important;
+            color: white !important;
+            padding: 40px !important;
+            border-radius: 20px !important;
+            text-align: center !important;
+            margin-top: 40px !important;
+        }
+
+        .footer-section h2 {
+            font-family: 'Great Vibes', cursive !important;
+            font-size: 2.5em !important;
+            color: #C7A95D !important;
+            margin-bottom: 20px !important;
+        }
+
+        .contact-info {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 30px !important;
+            flex-wrap: wrap !important;
+            margin-top: 20px !important;
+            font-size: 1.1em !important;
+        }
+
+        .contact-info div {
+            color: white !important;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em !important;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5em !important;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .categories-nav {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr !important;
+            }
+
+            .whatsapp-btn {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.5em !important;
+                bottom: 20px !important;
+                right: 20px !important;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+            }
+        }
+
+        /* CSS CRUCIAL PARA ARREGLAR NÚMEROS MONTADOS EN MENÚS DESPLEGABLES */
+
+        /* Regla 1: Desactiva posicionamiento absoluto en spans dentro de items */
+        .chef-catalog-wrapper .item-header span,
+        .chef-catalog-wrapper .item-price,
+        .chef-catalog-wrapper .menu-item span,
+        .chef-catalog-wrapper h3 span,
+        .chef-catalog-wrapper h4 span {
+            float: none !important;
+            position: static !important;
+            display: inline-block !important;
+            vertical-align: middle !important;
+            line-height: normal !important;
+        }
+
+        /* Regla 2: Asegura que item-header use flexbox */
+        .item-header {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            margin-bottom: 15px !important;
+            width: 100% !important;
+        }
+
+        /* Regla 3: Forzar que item-name y item-price no se superpongan */
+        .item-name {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.3em !important;
+            color: #7B8B52 !important;
+            font-weight: 700 !important;
+            flex: 1 !important;
+            position: static !important;
+            float: none !important;
+            display: block !important;
+        }
+
+        .item-price {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 1.3em !important;
+            color: #C7A95D !important;
+            font-weight: 700 !important;
+            white-space: nowrap !important;
+            margin-left: 15px !important;
+            position: static !important;
+            float: none !important;
+            display: inline-block !important;
+        }
+
+        /* Regla 4: Limpiar flotaciones en descripciones */
+        .item-description {
+            color: #666 !important;
+            line-height: 1.7 !important;
+            margin-bottom: 15px !important;
+            font-size: 0.95em !important;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            position: static !important;
+            float: none !important;
+        }
+
+        /* Regla 5: Asegurar que subsection-title no tenga problemas */
+        .subsection-title {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.8em !important;
+            color: #7B8B52 !important;
+            margin-bottom: 20px !important;
+            padding-left: 15px !important;
+            border-left: 5px solid #C7A95D !important;
+            position: static !important;
+            float: none !important;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+
+        /* Regla 6: Forzar todos los h2, h3, h4 a ser estáticos */
+        .chef-catalog-wrapper h2,
+        .chef-catalog-wrapper h3,
+        .chef-catalog-wrapper h4 {
+            position: static !important;
+            float: none !important;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+
+        .chef-catalog-wrapper h2 span,
+        .chef-catalog-wrapper h3 span,
+        .chef-catalog-wrapper h4 span {
+            position: static !important;
+            float: none !important;
+            display: inline !important;
+        }
+
+        /* 🩹 CORRECCIÓN VISUAL PARA BOTONES Y MENÚS DESPLEGABLES */
+        /* 1. Elimina cualquier numeración o marcador que Blogger genere */
+        .chef-catalog-wrapper button::before,
+        .chef-catalog-wrapper button::after,
+        .chef-catalog-wrapper summary::before,
+        .chef-catalog-wrapper summary::after,
+        .chef-catalog-wrapper .category-card::before,
+        .chef-catalog-wrapper .category-card::after,
+        .chef-catalog-wrapper .menu-item::before,
+        .chef-catalog-wrapper .menu-item::after,
+        .chef-catalog-wrapper .item-header::before,
+        .chef-catalog-wrapper .item-header::after {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* 2. Asegura que el texto del botón esté encima y limpio */
+        .chef-catalog-wrapper .category-card,
+        .chef-catalog-wrapper button,
+        .chef-catalog-wrapper summary,
+        .chef-catalog-wrapper .menu-item,
+        .chef-catalog-wrapper .item-includes {
+            position: relative !important;
+            z-index: 2 !important;
+            overflow: hidden !important;
+        }
+
+        /* 3. Si se usan listas dentro de los menús, eliminamos contadores */
+        .chef-catalog-wrapper .category-card ol,
+        .chef-catalog-wrapper .category-card ul,
+        .chef-catalog-wrapper .menu-item ol,
+        .chef-catalog-wrapper .menu-item ul {
+            list-style: none !important;
+            counter-reset: none !important;
+        }
+
+        .chef-catalog-wrapper .category-card li::before,
+        .chef-catalog-wrapper .menu-item li::before {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Reactivar solo para item-includes y subsection */
+        .chef-catalog-wrapper .item-includes li::before,
+        .chef-catalog-wrapper .subsection li::before {
+            content: "✓" !important;
+            display: inline-block !important;
+            visibility: visible !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+        }
+
+        /* 4. Evita que aparezcan números fantasmas de Blogger */
+        .chef-catalog-wrapper *[class*="card"]::marker,
+        .chef-catalog-wrapper *[class*="menu"]::marker,
+        .chef-catalog-wrapper *[class*="section"]::marker,
+        .chef-catalog-wrapper *[class*="item"]::marker,
+        .chef-catalog-wrapper li::marker {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* 5. Eliminar TODOS los pseudo-elementos de Blogger */
+        .chef-catalog-wrapper div::before,
+        .chef-catalog-wrapper div::after,
+        .chef-catalog-wrapper span::before,
+        .chef-catalog-wrapper span::after,
+        .chef-catalog-wrapper p::before,
+        .chef-catalog-wrapper p::after,
+        .chef-catalog-wrapper h3::before,
+        .chef-catalog-wrapper h3::after,
+        .chef-catalog-wrapper h4::before,
+        .chef-catalog-wrapper h4::after {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* 6. Forzar limpieza de contadores en TODO el wrapper */
+        .chef-catalog-wrapper * {
+            counter-reset: none !important;
+            counter-increment: none !important;
+        }
+
+        /* 7. Protección adicional para item-includes */
+        .chef-catalog-wrapper .item-includes *::before,
+        .chef-catalog-wrapper .item-includes *::after {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Excepto los li que queremos con check */
+        .chef-catalog-wrapper .item-includes > ul > li::before,
+        .chef-catalog-wrapper .subsection > ul > li::before {
+            content: "✓" !important;
+            display: inline-block !important;
+            visibility: visible !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 8px !important;
+            color: #7B8B52 !important;
+            font-weight: bold !important;
+        }
+
+        /* BÚSQUEDA */
+        .search-bar {
+            background: white !important;
+            padding: 20px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+            margin-bottom: 30px !important;
+        }
+
+        .search-input {
+            width: 100% !important;
+            padding: 15px 20px !important;
+            border: 2px solid #7B8B52 !important;
+            border-radius: 25px !important;
+            font-size: 16px !important;
+            font-family: 'Poppins', sans-serif !important;
+            transition: all 0.3s !important;
+        }
+
+        .search-input:focus {
+            outline: none !important;
+            border-color: #C7A95D !important;
+            box-shadow: 0 0 0 4px rgba(199, 169, 93, 0.1) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="chef-catalog-wrapper">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-logo">
+                <!-- 🔴 LÍNEA 735: AQUÍ CAMBIAS LA URL DE TU LOGO -->
+                <img src="URL_DE_TU_LOGO_AQUI" alt="Chef More's Logo" onerror="this.src='https://placehold.co/120x120/7B8B52/FFFFFF?text=Logo'">
+            </div>
+            <h1 class="hero-title">CHEF MORE'S</h1>
+            <p class="hero-subtitle">Sabores hechos a mano, momentos hechos para recordar</p>
+            <p class="hero-tagline">Catering Artesanal y Profesional en Costa Rica</p>
+        </div>
+
+        <!-- Galería de Fotos -->
+        <div class="photo-gallery">
+            <h2 class="gallery-title">📸 Nuestra Galería</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Algunos de nuestros platos más populares</p>
+            <div class="gallery-grid">
+                <!-- Agrega aquí las URLs de tus fotos reales -->
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/7B8B52/FFFFFF?text=Coffee+Break" alt="Coffee Break">
+                    <div class="gallery-overlay">
+                        <strong>Coffee Break</strong>
+                        <p>Bocadillos artesanales</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/C7A95D/FFFFFF?text=Parrillada" alt="Parrillada">
+                    <div class="gallery-overlay">
+                        <strong>Parrilladas</strong>
+                        <p>Carnes premium</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/7B8B52/FFFFFF?text=Bodas" alt="Bodas">
+                    <div class="gallery-overlay">
+                        <strong>Eventos Premium</strong>
+                        <p>Tu día especial</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/C7A95D/FFFFFF?text=Postres" alt="Postres">
+                    <div class="gallery-overlay">
+                        <strong>Postres Artesanales</strong>
+                        <p>Dulces irresistibles</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/7B8B52/FFFFFF?text=Paella" alt="Paella">
+                    <div class="gallery-overlay">
+                        <strong>Paellas en Vivo</strong>
+                        <p>Show cooking</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x400/C7A95D/FFFFFF?text=Brunch" alt="Brunch">
+                    <div class="gallery-overlay">
+                        <strong>Brunch Gourmet</strong>
+                        <p>Desayunos especiales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de Cotización -->
+        <div class="quote-form-section" id="quoteForm">
+            <h2 class="form-title">📝 Solicitar Cotización</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">
+                Completa el formulario y te contactaremos en menos de 24 horas
+            </p>
+            <form id="contactForm" onsubmit="return sendQuote(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Teléfono *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de evento *</label>
+                        <select id="eventType" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Coffee Break">Coffee Break</option>
+                            <option value="Desayuno/Brunch">Desayuno/Brunch</option>
+                            <option value="Almuerzo/Cena">Almuerzo/Cena</option>
+                            <option value="Parrillada">Parrillada</option>
+                            <option value="Boda">Boda</option>
+                            <option value="Evento Premium">Evento Premium</option>
+                            <option value="Paella">Paella</option>
+                            <option value="Infantil">Infantil/Lonchera</option>
+                            <option value="Mesa Dulce">Mesa Dulce</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Fecha del evento *</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de personas *</label>
+                        <input type="number" id="guestCount" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Mensaje / Detalles adicionales</label>
+                    <textarea id="message" placeholder="Cuéntanos más sobre tu evento..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">📨 Enviar Solicitud</button>
+            </form>
+        </div>
+
+        <!-- Calculadora de Presupuesto -->
+        <div class="budget-calculator" id="budgetCalculator">
+            <h2 class="calculator-header">💰 Calculadora de Presupuesto</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">
+                Agrega platos a tu presupuesto haciendo clic en los botones "Agregar al presupuesto"
+            </p>
+            <div class="selected-items" id="selectedItems">
+                <p style="text-align: center; color: #999;">No hay platos seleccionados aún</p>
+            </div>
+            <div class="calculator-total" id="totalAmount">Total: ₡0</div>
+            <div style="text-align: center; margin-top: 15px;">
+                <button class="add-to-budget-btn" onclick="clearBudget()" style="background: #f44336 !important; width: auto !important; display: inline-block !important; margin-right: 10px !important;">🗑️ Limpiar Todo</button>
+                <button class="add-to-budget-btn" onclick="shareWhatsApp()" style="width: auto !important; display: inline-block !important;">📱 Enviar por WhatsApp</button>
+            </div>
+        </div>
+
+        <!-- Búsqueda -->
+        <div class="search-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar platos, ingredientes, precios...">
+        </div>
+
+        <!-- Categorías -->
+        <div class="categories-nav">
+            <div class="category-card active" onclick="showSection('coffee')">
+                <div class="category-icon">☕</div>
+                <div class="category-name">Coffee Breaks</div>
+            </div>
+            <div class="category-card" onclick="showSection('breakfast')">
+                <div class="category-icon">🍳</div>
+                <div class="category-name">Desayunos</div>
+            </div>
+            <div class="category-card" onclick="showSection('lunch')">
+                <div class="category-icon">🍽️</div>
+                <div class="category-name">Almuerzos</div>
+            </div>
+            <div class="category-card" onclick="showSection('bbq')">
+                <div class="category-icon">🔥</div>
+                <div class="category-name">Parrilladas</div>
+            </div>
+            <div class="category-card" onclick="showSection('wedding')">
+                <div class="category-icon">💍</div>
+                <div class="category-name">Bodas</div>
+            </div>
+            <div class="category-card" onclick="showSection('world')">
+                <div class="category-icon">🌍</div>
+                <div class="category-name">Sabores del Mundo</div>
+            </div>
+            <div class="category-card" onclick="showSection('paella')">
+                <div class="category-icon">🥘</div>
+                <div class="category-name">Paellas</div>
+            </div>
+            <div class="category-card" onclick="showSection('kids')">
+                <div class="category-icon">👶</div>
+                <div class="category-name">Infantiles</div>
+            </div>
+            <div class="category-card" onclick="showSection('desserts')">
+                <div class="category-icon">🍰</div>
+                <div class="category-name">Postres</div>
+            </div>
+        </div>
+
+        <!-- Coffee Breaks -->
+        <div class="content-section active" id="coffee">
+            <h2 class="section-title">☕ Coffee Breaks & Reuniones Empresariales</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Clásico Ejecutivo</h3>
+                        <span class="item-price">₡3,500 p/p</span>
+                    </div>
+                    <p class="item-description">Perfecto para reuniones empresariales y eventos corporativos</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>2 Bocadillos dulces + 2 bocadillos salados</li>
+                            <li>Café, té, leche</li>
+                            <li>Jugo natural</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Clásico Ejecutivo - Coffee Break', 3500, 1)">+ Agregar al presupuesto</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Premium Saludable</h3>
+                        <span class="item-price">₡4,800 p/p</span>
+                    </div>
+                    <p class="item-description">Opción gourmet con enfoque saludable</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Wrap integral con pollo asado</li>
+                            <li>Parfait de yogur natural y frutas con granola</li>
+                            <li>Mini quiché</li>
+                            <li>Barra de café gourmet</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Premium Saludable - Coffee Break', 4800, 1)">+ Agregar al presupuesto</button>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Bocadillos Salados</h3>
+                <div class="info-box">
+                    💡 Todos hechos a mano, con masa fresca elaborada por Chef More's
+                </div>
+                <ul>
+                    <li>Mini empanadas de pollo criollo con masa artesanal</li>
+                    <li>Mini pastelitos de carne mechada con ají dulce</li>
+                    <li>Tartaletas de atún con cebolla caramelizada</li>
+                    <li>Canapés de hummus y pimentón rostizado</li>
+                    <li>Mini wraps de pollo BBQ con vegetales crocantes</li>
+                    <li>Croquetas de jamón artesanal con dip de mostaza miel</li>
+                    <li>Mini quiche de espinaca y queso feta</li>
+                    <li>Mini bruschettas de tomate y albahaca</li>
+                    <li>Brochetas caprese (tomate cherry, mozzarella y albahaca)</li>
+                    <li>Mini cachitos rellenos de jamón artesanal y queso tico</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Bocadillos Dulces</h3>
+                <div class="info-box">
+                    💡 Perfectos para coffee breaks y estaciones de dulces personalizadas
+                </div>
+                <ul>
+                    <li>Mini tres leches artesanales</li>
+                    <li>Mini brownies con ganache de chocolate oscuro</li>
+                    <li>Tartaletas de frutas con crema pastelera</li>
+                    <li>Mini cheesecakes de maracuyá</li>
+                    <li>Pan de banano con trozos de nuez</li>
+                    <li>Mini pavlovas con crema chantilly y frutas tropicales</li>
+                    <li>Galletas de avena, coco y miel</li>
+                    <li>Cupcakes de red velvet con frosting de queso crema</li>
+                    <li>Mini mousses de chocolate y café</li>
+                    <li>Rollitos de canela glaseados</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Extras para Estaciones</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Barra de Jugos Tropicales</h3>
+                            <span class="item-price">₡1,200 p/p</span>
+                        </div>
+                        <button class="add-to-budget-btn" onclick="addToBudget('Barra de Jugos Tropicales', 1200, 1)">+ Agregar</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Estación de Frutas Tropicales</h3>
+                            <span class="item-price">₡1,200 p/p</span>
+                        </div>
+                        <button class="add-to-budget-btn" onclick="addToBudget('Estación de Frutas Tropicales', 1200, 1)">+ Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desayunos -->
+        <div class="content-section" id="breakfast">
+            <h2 class="section-title">🍳 Desayunos & Brunch</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Desayuno Típico Tico</h3>
+                        <span class="item-price">₡4,800 p/p</span>
+                    </div>
+                    <p class="item-description">El auténtico sabor de Costa Rica</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Gallo pinto</li>
+                            <li>Huevo al gusto</li>
+                            <li>Plátano maduro caramelizado</li>
+                            <li>Natilla y queso tierno</li>
+                            <li>Salchichón o salchicha</li>
+                            <li>Pan artesanal o tortillas palmeadas</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Desayuno Típico Tico', 4800, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Desayunos Internacionales</h3>
+                        <span class="item-price">₡6,500 p/p</span>
+                    </div>
+                    <p class="item-description">Elige entre 3 opciones gourmet</p>
+                    <div class="item-includes">
+                        <strong>Opciones:</strong>
+                        <ul>
+                            <li>Mediterráneo Gourmet</li>
+                            <li>Americano Estilo Deluxe</li>
+                            <li>Fusión Francia/Costa Rica</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Desayuno Internacional', 6500, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Brunch Gourmet</h3>
+                        <span class="item-price">₡8,500 p/p</span>
+                    </div>
+                    <p class="item-description">Experiencia completa de brunch con estaciones interactivas</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Estación de huevos al gusto con toppings</li>
+                            <li>Croissants rellenos, mini quiches y wraps</li>
+                            <li>Arepitas venezolanas con rellenos variados</li>
+                            <li>Mini ceviches con chips de plátano</li>
+                            <li>Estación de mimosas o smoothies naturales</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Brunch Gourmet', 8500, 1)">+ Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Almuerzos -->
+        <div class="content-section" id="lunch">
+            <h2 class="section-title">🍽️ Almuerzos & Cenas</h2>
+            <div class="info-box">
+                Todos los menús incluyen barra de ensaladas artesanal, postres y bebida natural
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Menús Básicos - ₡5,500 p/p</h3>
+                <p style="color: #666; margin-bottom: 20px;">Proteína + 2 guarniciones + postre + bebida</p>
+                <ul>
+                    <li>Pollo al ajillo con arroz con vegetales y puré rústico</li>
+                    <li>Cerdo en salsa de piña y miel con arroz blanco</li>
+                    <li>Filete de tilapia al limón con papas salteadas</li>
+                    <li>Pollo en salsa criolla con arroz y frijoles molidos</li>
+                    <li>Albóndigas caseras en salsa napolitana con arroz</li>
+                    <li>Lomo de cerdo en salsa BBQ artesanal</li>
+                    <li>Pechuga a la plancha con puré y ensalada</li>
+                    <li>Casado típico tico completo</li>
+                    <li>Pollo con vegetales salteados al wok</li>
+                    <li>Pescado empanizado con papas rústicas</li>
+                </ul>
+                <button class="add-to-budget-btn" onclick="addToBudget('Menú Básico - Almuerzo/Cena', 5500, 1)" style="width: auto !important; display: inline-block !important;">+ Agregar al presupuesto</button>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Menús Intermedios - ₡6,500 p/p</h3>
+                <p style="color: #666; margin-bottom: 20px;">Barra de ensalada + proteína + 2 guarniciones gourmet + postre artesanal + bebida</p>
+                <ul>
+                    <li>Pollo relleno de espinaca y queso crema en salsa de vino blanco</li>
+                    <li>Lomo de cerdo con reducción de maracuyá</li>
+                    <li>Pechuga a la parrilla con salsa de champiñones</li>
+                    <li>Filete de pescado en salsa de coco y curry suave</li>
+                    <li>Medallones de cerdo con glaseado de miel y mostaza</li>
+                    <li>Pollo en salsa de tamarindo con arroz con almendras</li>
+                    <li>Lasaña de carne o pollo artesanal con focaccia</li>
+                    <li>Chuleta de cerdo a la naranja con papas salteadas</li>
+                    <li>Pollo al pesto con espaguetis al dente</li>
+                    <li>Filete de res en salsa de vino tinto</li>
+                </ul>
+                <button class="add-to-budget-btn" onclick="addToBudget('Menú Intermedio - Almuerzo/Cena', 6500, 1)" style="width: auto !important; display: inline-block !important;">+ Agregar al presupuesto</button>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Menús Premium Internacional - ₡9,500 p/p</h3>
+                <p style="color: #666; margin-bottom: 20px;">Barra de ensaladas + proteína premium + 3 guarniciones + postre artesanal + bebida</p>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h4 class="item-name">Filet Mignon</h4>
+                        <p class="item-description">En salsa de hongos con papas gratinadas</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Salmón Glaseado</h4>
+                        <p class="item-description">En miel y jengibre sobre risotto cítrico</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Asado Negro Venezolano</h4>
+                        <p class="item-description">Receta tradicional con toque artesanal</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Risotto de Mariscos</h4>
+                        <p class="item-description">Con alioli de ajo rostizado</p>
+                    </div>
+                </div>
+                <button class="add-to-budget-btn" onclick="addToBudget('Menú Premium Internacional', 9500, 1)" style="width: auto !important; display: inline-block !important;">+ Agregar al presupuesto</button>
+            </div>
+        </div>
+
+        <!-- Parrilladas -->
+        <div class="content-section" id="bbq">
+            <h2 class="section-title">🔥 Parrilladas & Eventos Informales</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Parrillada Tica</h3>
+                        <span class="item-price">₡7,000 p/p</span>
+                    </div>
+                    <p class="item-description">Sabores tradicionales costarricenses a la parrilla</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Gallos de lomo, pollo, chorizo parrillero</li>
+                            <li>Tortillas palmeadas y artesanales</li>
+                            <li>Picadillo de papa o vegetales al grill</li>
+                            <li>Plátano maduro con queso</li>
+                            <li>Ensalada criolla</li>
+                            <li>Salsas artesanales</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Parrillada Tica', 7000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Parrillada Internacional</h3>
+                        <span class="item-price">₡11,500 p/p</span>
+                    </div>
+                    <p class="item-description">Selección premium de carnes y acompañamientos gourmet</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>Rib eye, brochetas de pollo, costilla BBQ</li>
+                            <li>Choripán argentino</li>
+                            <li>Vegetales grillados</li>
+                            <li>Panes rústicos, tortillas, arepas</li>
+                            <li>8 salsas artesanales de la Chef</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Parrillada Internacional', 11500, 1)">+ Agregar</button>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Salsas Artesanales de la Chef</h3>
+                <div class="info-box">
+                    Todas nuestras salsas son preparadas en casa con ingredientes frescos
+                </div>
+                <ul>
+                    <li>Chimichurri con hierbas frescas</li>
+                    <li>BBQ casera estilo Chef More's</li>
+                    <li>Salsa chipotle</li>
+                    <li>Guasacaca</li>
+                    <li>Salsa de ajo rostizado</li>
+                    <li>Guacamole</li>
+                    <li>Salsa de tamarindo y chile dulce</li>
+                    <li>Mojo verde criollo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bodas -->
+        <div class="content-section" id="wedding">
+            <h2 class="section-title">💍 Bodas & Eventos Premium</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Boda Esencial</h3>
+                        <span class="item-price">₡18,500 p/p</span>
+                    </div>
+                    <p class="item-description">Paquete completo para tu día especial</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>1 Aperitivo</li>
+                            <li>1 Entrada</li>
+                            <li>Proteína principal</li>
+                            <li>2 Guarniciones</li>
+                            <li>Postre</li>
+                            <li>Bebida</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Boda Esencial', 18500, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Boda Premium</h3>
+                        <span class="item-price">₡24,000 p/p</span>
+                    </div>
+                    <p class="item-description">La experiencia gastronómica más completa</p>
+                    <div class="item-includes">
+                        <strong>Incluye:</strong>
+                        <ul>
+                            <li>2 Aperitivos</li>
+                            <li>Copa de brindis</li>
+                            <li>Entrada</li>
+                            <li>2 Proteínas</li>
+                            <li>2 Guarniciones</li>
+                            <li>Postres</li>
+                            <li>Comida de cierre</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Boda Premium', 24000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Mesa de Quesos</h3>
+                        <span class="item-price">₡3,500 p/p</span>
+                    </div>
+                    <p class="item-description">Extra opcional - Estación de charcutería gourmet</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Mesa de Quesos Artesanales', 3500, 1)">+ Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sabores del Mundo -->
+        <div class="content-section" id="world">
+            <h2 class="section-title">🌍 Sabores del Mundo</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Barra de Pokes</h3>
+                        <span class="item-price">₡5,000 p/p</span>
+                    </div>
+                    <p class="item-description">Preparados al momento con ingredientes frescos</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Barra de Pokes', 5000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Italiana</h3>
+                        <span class="item-price">₡6,000 p/p</span>
+                    </div>
+                    <p class="item-description">Lasañas, focaccia y más</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Cocina Italiana', 6000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Mexicana</h3>
+                        <span class="item-price">₡6,000 p/p</span>
+                    </div>
+                    <p class="item-description">Tacos de Birria y Pozole</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Cocina Mexicana', 6000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Asiática</h3>
+                        <span class="item-price">₡7,000 p/p</span>
+                    </div>
+                    <p class="item-description">Wok de trucha y vegetales</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Cocina Asiática', 7000, 1)">+ Agregar</button>
+                </div>
+            </div>
+
+            <div class="price-highlight">
+                <h3>✈️ TOUR DE SABORES</h3>
+                <p style="margin: 15px 0; font-size: 1.1em;">"Acceso a pequeñas porciones de sabores distintos en un recorrido abierto por 2 horas."</p>
+                <p style="font-size: 1.5em; font-weight: 700;">₡15,000 p/p</p>
+                <p style="font-size: 0.9em; margin-top: 10px;">Incluye 3 Estaciones a elegir</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Tour de Sabores (3 estaciones)', 15000, 1)" style="background: white !important; color: #7B8B52 !important; margin-top: 15px !important;">+ Agregar</button>
+            </div>
+        </div>
+
+        <!-- Paellas -->
+        <div class="content-section" id="paella">
+            <h2 class="section-title">🥘 Paellas & Experiencias Españolas</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Paella Mediterránea Clásica</h3>
+                        <span class="item-price">₡9,500 p/p</span>
+                    </div>
+                    <p class="item-description">Valenciana, Mariscos, Veggie, Mixta o Árabe</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Paella Mediterránea Clásica', 9500, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Estación de Paella en Vivo</h3>
+                        <span class="item-price">₡12,500 p/p</span>
+                    </div>
+                    <p class="item-description">¡Show cooking! Preparación frente a los invitados</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Estación de Paella en Vivo', 12500, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Experiencia Española Completa</h3>
+                        <span class="item-price">₡16,500 p/p</span>
+                    </div>
+                    <p class="item-description">Paella + Tapas + Churros + Sangría</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Experiencia Española Completa', 16500, 1)">+ Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infantiles -->
+        <div class="content-section" id="kids">
+            <h2 class="section-title">👶 Infantiles & Loncheras</h2>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Menú Niños</h3>
+                        <span class="item-price">₡4,000 p/p</span>
+                    </div>
+                    <p class="item-description">Hamburguesas, nuggets, pasta o pizza artesanal</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Menú Niños', 4000, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Lonchera Básica</h3>
+                        <span class="item-price">₡3,250 p/p</span>
+                    </div>
+                    <p class="item-description">Fruta + sándwich + snack + bebida</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Lonchera Básica', 3250, 1)">+ Agregar</button>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-name">Lonchera Especial</h3>
+                        <span class="item-price">₡5,000 p/p</span>
+                    </div>
+                    <p class="item-description">Versión completa y saludable</p>
+                    <button class="add-to-budget-btn" onclick="addToBudget('Lonchera Especial', 5000, 1)">+ Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Postres -->
+        <div class="content-section" id="desserts">
+            <h2 class="section-title">🍰 Mesas Dulces & Postres</h2>
+
+            <div class="price-highlight">
+                <h3>Mesa Dulce Completa</h3>
+                <p style="margin: 15px 0; font-size: 1.1em;">200 unidades de postres variados</p>
+                <p style="font-size: 1.5em; font-weight: 700;">₡150,000</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mesa Dulce Completa (200 unidades)', 150000, 1)" style="background: white !important; color: #7B8B52 !important; margin-top: 15px !important;">+ Agregar</button>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Postres Disponibles</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h4 class="item-name">Tres Leches</h4>
+                        <p class="item-description">Tradicional o maracuyá</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Cheesecake</h4>
+                        <p class="item-description">Frutos rojos o mango</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Pavlova</h4>
+                        <p class="item-description">Con frutas tropicales</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Tiramisú</h4>
+                        <p class="item-description">Receta italiana auténtica</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Brownies Gourmet</h4>
+                        <p class="item-description">Con nueces o chocolate</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4 class="item-name">Brigadeiros</h4>
+                        <p class="item-description">Dulce brasileño premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <h2>Hecho a mano, servido con el corazón</h2>
+            <p style="font-size: 1.2em; margin: 20px 0;">
+                En Chef More's, no solo ofrecemos comida: creamos experiencias memorables.
+            </p>
+            <p style="margin: 15px 0; line-height: 1.8;">
+                Cada evento es único, y nos adaptamos a tus necesidades, gustos y presupuesto.<br>
+                Nuestro compromiso es simple: <strong>ingredientes frescos, preparación artesanal y un servicio que supera expectativas.</strong>
+            </p>
+
+            <div class="contact-info">
+                <div>📱 WhatsApp: +506 8609-6644</div>
+                <div>📧 Email: soportechefmores@gmail.com</div>
+                <div>🌐 www.chefmores.online</div>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+                Todos los precios están sujetos a cambios sin previo aviso<br>
+                © 2025 Chef More's Catering Service - Catering Artesanal y Profesional en Costa Rica
+            </p>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/50686096644?text=Hola%20Chef%20More's,%20me%20interesa%20cotizar%20un%20servicio" class="whatsapp-btn" target="_blank">
+            📱
+        </a>
+    </div>
+
+    <script>
+        // Budget Calculator
+        let budgetItems = [];
+        let totalBudget = 0;
+
+        function addToBudget(itemName, price, quantity) {
+            const existingItem = budgetItems.find(item => item.name === itemName);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                budgetItems.push({
+                    name: itemName,
+                    price: price,
+                    quantity: quantity
+                });
+            }
+
+            updateBudgetDisplay();
+            document.getElementById('budgetCalculator').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function removeFromBudget(index) {
+            budgetItems.splice(index, 1);
+            updateBudgetDisplay();
+        }
+
+        function updateBudgetDisplay() {
+            const selectedItemsDiv = document.getElementById('selectedItems');
+            const totalAmountDiv = document.getElementById('totalAmount');
+
+            if (budgetItems.length === 0) {
+                selectedItemsDiv.innerHTML = '<p style="text-align: center; color: #999; font-family: Poppins, sans-serif !important;">No hay platos seleccionados aún</p>';
+                totalBudget = 0;
+            } else {
+                totalBudget = 0;
+                let html = '';
+
+                budgetItems.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    totalBudget += itemTotal;
+
+                    html += `
+                        <div class="selected-item">
+                            <div style="flex: 1; font-family: Poppins, sans-serif !important;">
+                                <strong style="font-family: Poppins, sans-serif !important;">${item.name}</strong><br>
+                                <small style="font-family: Poppins, sans-serif !important;">₡${item.price.toLocaleString()} x ${item.quantity} persona(s) = ₡${itemTotal.toLocaleString()}</small>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; font-family: Poppins, sans-serif !important;">
+                                <button onclick="changeQuantity(${index}, -1)" style="background: #ff9800; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-weight: 600; font-family: Poppins, sans-serif !important;">-</button>
+                                <span style="font-weight: 700; min-width: 30px; text-align: center; font-family: Poppins, sans-serif !important;">${item.quantity}</span>
+                                <button onclick="changeQuantity(${index}, 1)" style="background: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-weight: 600; font-family: Poppins, sans-serif !important;">+</button>
+                                <button class="remove-item-btn" onclick="removeFromBudget(${index})" style="font-family: Poppins, sans-serif !important;">✕</button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                selectedItemsDiv.innerHTML = html;
+            }
+
+            // Limpiar el contenido y establecerlo directamente sin símbolos HTML
+            const colones = String.fromCharCode(8353); // Símbolo ₡
+            totalAmountDiv.textContent = '';
+            totalAmountDiv.innerHTML = `<span style="font-family: Poppins, sans-serif !important;">Total: ₡${totalBudget.toLocaleString()}</span>`;
+        }
+
+        function changeQuantity(index, change) {
+            budgetItems[index].quantity += change;
+            if (budgetItems[index].quantity <= 0) {
+                removeFromBudget(index);
+            } else {
+                updateBudgetDisplay();
+            }
+        }
+
+        function clearBudget() {
+            if (confirm('¿Estás seguro de que quieres limpiar todo el presupuesto?')) {
+                budgetItems = [];
+                updateBudgetDisplay();
+            }
+        }
+
+        function shareWhatsApp() {
+            if (budgetItems.length === 0) {
+                alert('Agrega platos al presupuesto primero');
+                return;
+            }
+
+            let message = '🍽️ *Cotización Chef More\'s*%0A%0A';
+
+            budgetItems.forEach(item => {
+                message += `▫️ ${item.name}%0A`;
+                message += `   ${item.quantity} persona(s) x ₡${item.price.toLocaleString()}%0A`;
+                message += `   Subtotal: ₡${(item.price * item.quantity).toLocaleString()}%0A%0A`;
+            });
+
+            message += `*TOTAL: ₡${totalBudget.toLocaleString()}*%0A%0A`;
+            message += 'Me gustaría recibir más información sobre este presupuesto.';
+
+            window.open(`https://wa.me/50686096644?text=${message}`, '_blank');
+        }
+
+        // Category Navigation
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            document.getElementById(sectionId).classList.add('active');
+
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            event.target.closest('.category-card').classList.add('active');
+
+            document.querySelector('.content-section.active').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const allSections = document.querySelectorAll('.content-section');
+
+            if (searchTerm === '') {
+                return;
+            }
+
+            allSections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+
+        // Quote Form
+        function sendQuote(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const eventType = document.getElementById('eventType').value;
+            const eventDate = document.getElementById('eventDate').value;
+            const guestCount = document.getElementById('guestCount').value;
+            const message = document.getElementById('message').value;
+
+            let whatsappMessage = `🎉 *Nueva Solicitud de Cotización*%0A%0A`;
+            whatsappMessage += `👤 *Nombre:* ${name}%0A`;
+            whatsappMessage += `📱 *Teléfono:* ${phone}%0A`;
+            whatsappMessage += `📧 *Email:* ${email}%0A`;
+            whatsappMessage += `🎊 *Tipo de Evento:* ${eventType}%0A`;
+            whatsappMessage += `📅 *Fecha:* ${eventDate}%0A`;
+            whatsappMessage += `👥 *Personas:* ${guestCount}%0A`;
+
+            if (message) {
+                whatsappMessage += `💬 *Mensaje:* ${message}%0A`;
+            }
+
+            if (budgetItems.length > 0) {
+                whatsappMessage += `%0A📋 *Platos Seleccionados:*%0A`;
+                budgetItems.forEach(item => {
+                    whatsappMessage += `▫️ ${item.name} (${item.quantity} pers.)%0A`;
+                });
+                whatsappMessage += `%0A💰 *Total Estimado:* ₡${totalBudget.toLocaleString()}`;
+            }
+
+            window.open(`https://wa.me/50686096644?text=${whatsappMessage}`, '_blank');
+
+            alert('¡Gracias! Tu solicitud será enviada por WhatsApp.');
+
+            return false;
+        }
+    </script>
+</body>
+</html>
+                        <label>Nombre completo *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
