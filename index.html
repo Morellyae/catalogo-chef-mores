@@ -1296,7 +1296,11 @@
                 <div class="category-icon">🍰</div>
                 <div class="category-name">Postres</div>
             </div>
-        </div>
+            <div class="category-card" onclick="showSection('especial')">
+    <div class="category-icon">🌿</div>
+    <div class="category-name">Menú Especial</div>
+</div>
+       </div>
 
         <!-- Coffee Breaks -->
         <div class="content-section active" id="coffee">
@@ -1809,7 +1813,474 @@
                 </div>
             </div>
         </div>
+   <!-- AGREGAR ESTA TARJETA EN LA SECCIÓN DE CATEGORÍAS (después de "Postres") -->
+<div class="category-card" onclick="showSection('especial')">
+    <div class="category-icon">🌿</div>
+    <div class="category-name">Menú Especial</div>
+</div>
 
+<!-- AGREGAR ESTA SECCIÓN COMPLETA DESPUÉS DE LA SECCIÓN DE POSTRES -->
+<div class="content-section" id="especial">
+    <h2 class="section-title">🌿 Selección Especial - Opciones Veganas, Vegetarianas y Sin Gluten</h2>
+    <div class="info-box">
+        "Chef More's cree en la inclusión gastronómica: ofrecemos experiencias para todos los gustos y estilos de vida. Cada menú puede personalizarse con versiones veganas, vegetarianas o sin gluten, sin comprometer el sabor, la presentación ni la calidad artesanal."
+    </div>
+
+    <!-- COFFEE BREAKS -->
+    <div class="subsection">
+        <h3 class="subsection-title">☕ Coffee Breaks y Reuniones Empresariales</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini empanadas de lentejas</h4>
+                    <span class="item-price">₡1,200 c/u</span>
+                </div>
+                <p class="item-description">Con masa de maíz artesanal</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini empanadas de lentejas (Vegana)', 1200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Bocaditos de hummus</h4>
+                    <span class="item-price">₡1,000 c/u</span>
+                </div>
+                <p class="item-description">Con vegetales en pan pita integral</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Bocaditos de hummus y vegetales (Vegana)', 1000, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Cheesecake de maracuyá</h4>
+                    <span class="item-price">₡3,200 c/u</span>
+                </div>
+                <p class="item-description">Artesanal</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Cheesecake de maracuyá (Vegetariana)', 3200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini tartaletas de frutas</h4>
+                    <span class="item-price">₡2,800 c/u</span>
+                </div>
+                <p class="item-description">Con crema pastelera</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Tartaletas de frutas (Vegetariana)', 2800, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Brownies de cacao</h4>
+                    <span class="item-price">₡2,500 c/u</span>
+                </div>
+                <p class="item-description">Y nueces sin harina</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Brownies sin gluten', 2500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pavlova de merengue</h4>
+                    <span class="item-price">₡3,000 c/u</span>
+                </div>
+                <p class="item-description">Con frutas tropicales</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pavlova tropical (Sin Gluten)', 3000, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+                    <h4 class="item-name">Mini quiche de espinaca</h4>
+                    <span class="item-price">₡1,300 c/u</span>
+                </div>
+                <p class="item-description">Con queso feta</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini quiche de espinaca y feta (Vegetariana)', 1300, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Wraps de vegetales grillados</h4>
+                    <span class="item-price">₡1,400 c/u</span>
+                </div>
+                <p class="item-description">Con mayonesa de ajo</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Wraps de vegetales grillados (Vegetariana)', 1400, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini arepitas de maíz</h4>
+                    <span class="item-price">₡1,200 c/u</span>
+                </div>
+                <p class="item-description">Con relleno de vegetales y guacamole</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini arepitas con vegetales (Sin Gluten)', 1200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Galletas de avena y coco</h4>
+                    <span class="item-price">₡900 c/u</span>
+                </div>
+                <p class="item-description">Sin harina de trigo</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Galletas de avena y coco (Sin Gluten)', 900, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DESAYUNOS Y BRUNCH -->
+    <div class="subsection">
+        <h3 class="subsection-title">🍳 Desayunos y Brunch</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Tazón de frutas tropicales</h4>
+                    <span class="item-price">₡3,500 p/p</span>
+                </div>
+                <p class="item-description">Con granola y miel de agave</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Tazón de frutas con granola (Vegana)', 3500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Tostadas de aguacate</h4>
+                    <span class="item-price">₡3,800 p/p</span>
+                </div>
+                <p class="item-description">Con tomate cherry y semillas de chía</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Tostadas de aguacate (Vegana)', 3800, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Omelette de vegetales</h4>
+                    <span class="item-price">₡4,200 p/p</span>
+                </div>
+                <p class="item-description">Con queso tierno y pan sin levadura</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Omelette de vegetales (Vegetariana)', 4200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Panqueques de avena</h4>
+                    <span class="item-price">₡3,900 p/p</span>
+                </div>
+                <p class="item-description">Con miel artesanal y banano</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Panqueques de avena (Vegetariana)', 3900, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pan de yuca</h4>
+                    <span class="item-price">₡3,500 p/p</span>
+                </div>
+                <p class="item-description">Con natilla artesanal</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pan de yuca con natilla (Sin Gluten)', 3500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Waffles de harina de arroz</h4>
+                    <span class="item-price">₡4,000 p/p</span>
+                </div>
+                <p class="item-description">Con frutas y miel natural</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Waffles de arroz (Sin Gluten)', 4000, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALMUERZOS Y CENAS -->
+    <div class="subsection">
+        <h3 class="subsection-title">🍽️ Almuerzos y Cenas</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Curry de garbanzos</h4>
+                    <span class="item-price">₡6,500 p/p</span>
+                </div>
+                <p class="item-description">Con arroz jazmín y vegetales al wok</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Curry de garbanzos (Vegana)', 6500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Lasaña de berenjenas</h4>
+                    <span class="item-price">₡7,000 p/p</span>
+                </div>
+                <p class="item-description">Y zucchini con salsa napolitana casera</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Lasaña de berenjenas (Vegana)', 7000, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Risotto de hongos</h4>
+                    <span class="item-price">₡7,500 p/p</span>
+                </div>
+                <p class="item-description">Y espinaca con parmesano</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Risotto de hongos (Vegetariana)', 7500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Ensalada tibia de quinua</h4>
+                    <span class="item-price">₡6,800 p/p</span>
+                </div>
+                <p class="item-description">Con vegetales y aderezo de limón</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Ensalada tibia de quinua (Vegetariana)', 6800, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pollo a la plancha</h4>
+                    <span class="item-price">₡6,500 p/p</span>
+                </div>
+                <p class="item-description">Con puré de papa y ensalada verde (sin salsas con harina)</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pollo a la plancha (Sin Gluten)', 6500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pescado al vapor</h4>
+                    <span class="item-price">₡7,200 p/p</span>
+                </div>
+                <p class="item-description">Con vegetales salteados y arroz integral</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pescado al vapor (Sin Gluten)', 7200, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARRILLADAS -->
+    <div class="subsection">
+        <h3 class="subsection-title">🔥 Parrilladas y Eventos Informales</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Brochetas de tofu marinado</h4>
+                    <span class="item-price">₡5,500 p/p</span>
+                </div>
+                <p class="item-description">Con vegetales grillados</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Brochetas de tofu (Vegana)', 5500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Hamburguesas de lentejas</h4>
+                    <span class="item-price">₡5,800 p/p</span>
+                </div>
+                <p class="item-description">Y remolacha con pan sin gluten</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Hamburguesas de lentejas (Vegana)', 5800, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Brochetas caprese</h4>
+                    <span class="item-price">₡4,800 p/p</span>
+                </div>
+                <p class="item-description">Con pesto artesanal</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Brochetas caprese (Vegetariana)', 4800, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Papas asadas</h4>
+                    <span class="item-price">₡4,200 p/p</span>
+                </div>
+                <p class="item-description">Con crema agria y cebollino</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Papas asadas con crema (Vegetariana)', 4200, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Chorizo artesanal sin gluten</h4>
+                    <span class="item-price">₡6,200 p/p</span>
+                </div>
+                <p class="item-description">Con ensalada fresca</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Chorizo sin gluten (Sin Gluten)', 6200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Filete de pollo a la parrilla</h4>
+                    <span class="item-price">₡6,500 p/p</span>
+                </div>
+                <p class="item-description">Con yuca al mojo</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pollo a la parrilla con yuca (Sin Gluten)', 6500, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODAS Y EVENTOS PREMIUM -->
+    <div class="subsection">
+        <h3 class="subsection-title">💍 Bodas y Eventos Premium</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Risotto de hongos vegano</h4>
+                    <span class="item-price">₡8,500 p/p</span>
+                </div>
+                <p class="item-description">Con crema vegetal y vino blanco</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Risotto de hongos vegano (Vegana)', 8500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Raviolis de lentejas</h4>
+                    <span class="item-price">₡9,000 p/p</span>
+                </div>
+                <p class="item-description">En salsa de tomate fresco</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Raviolis de lentejas (Vegana)', 9000, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Crepes de espinaca</h4>
+                    <span class="item-price">₡8,200 p/p</span>
+                </div>
+                <p class="item-description">Y ricotta con salsa de tomate rústica</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Crepes de espinaca (Vegetariana)', 8200, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Ensalada de quinua premium</h4>
+                    <span class="item-price">₡7,800 p/p</span>
+                </div>
+                <p class="item-description">Con mango, nueces y vinagreta balsámica</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Ensalada de quinua con mango (Vegetariana)', 7800, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Filete de salmón a la plancha</h4>
+                    <span class="item-price">₡10,500 p/p</span>
+                </div>
+                <p class="item-description">Con puré de camote y vegetales</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Salmón con camote (Sin Gluten)', 10500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pollo relleno de espinaca</h4>
+                    <span class="item-price">₡9,200 p/p</span>
+                </div>
+                <p class="item-description">Con risotto de arroz integral</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pollo relleno (Sin Gluten)', 9200, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFANTILES -->
+    <div class="subsection">
+        <h3 class="subsection-title">👶 Infantiles y Loncheras</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Nuggets de garbanzos</h4>
+                    <span class="item-price">₡3,500 p/p</span>
+                </div>
+                <p class="item-description">Con papas al horno</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Nuggets de garbanzos (Vegana)', 3500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini wraps de vegetales</h4>
+                    <span class="item-price">₡3,200 p/p</span>
+                </div>
+                <p class="item-description">Con hummus</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini wraps vegetales (Vegana)', 3200, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini pasta Alfredo</h4>
+                    <span class="item-price">₡3,800 p/p</span>
+                </div>
+                <p class="item-description">Sin carne</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini pasta Alfredo (Vegetariana)', 3800, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Pizza margarita artesanal</h4>
+                    <span class="item-price">₡4,000 p/p</span>
+                </div>
+                <p class="item-description">Con pan de masa madre</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Pizza margarita (Vegetariana)', 4000, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌾 Opciones Sin Gluten</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mini hamburguesas de pollo</h4>
+                    <span class="item-price">₡3,800 p/p</span>
+                </div>
+                <p class="item-description">En pan de yuca</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mini hamburguesas (Sin Gluten)', 3800, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Fruta picada</h4>
+                    <span class="item-price">₡2,800 p/p</span>
+                </div>
+                <p class="item-description">Con yogurt natural</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Fruta con yogurt (Sin Gluten)', 2800, 1)">+ Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POSTRES -->
+    <div class="subsection">
+        <h3 class="subsection-title">🍰 Mesas Dulces y Postres</h3>
+        
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🌱 Opciones Veganas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Mousse de chocolate</h4>
+                    <span class="item-price">₡2,500 c/u</span>
+                </div>
+                <p class="item-description">Con leche de coco</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Mousse de chocolate vegano', 2500, 1)">+ Agregar</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4 class="item-name">Galletas de almendra</h4>
+                    <span class="item-price">₡1,500 c/u</span>
+                </div>
+                <p class="item-description">Y avena sin mantequilla</p>
+                <button class="add-to-budget-btn" onclick="addToBudget('Galletas de almendra (Vegana)', 1500, 1)">+ Agregar</button>
+            </div>
+        </div>
+
+        <h4 style="color: #7B8B52; font-family: 'Playfair Display', serif; margin: 20px 0 15px 0; font-size: 1.3em;">🥗 Opciones Vegetarianas</h4>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
         <!-- Footer -->
         <div class="footer-section">
             <h2>Hecho a mano, servido con el corazón</h2>
@@ -2022,5 +2493,6 @@
                         <input type="text" id="name" required>
                     </div>
                     <div class="form-group">
+
 
 
